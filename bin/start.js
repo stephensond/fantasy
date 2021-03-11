@@ -9,7 +9,7 @@ import selectall from '../routes/selectall.js'
 
 const app = express();
 
-var PORT = 9000 || process.env.PORT;
+var PORT = process.env.PORT || 9000;
 
 const server = http.createServer(app);
 server.listen(PORT);
