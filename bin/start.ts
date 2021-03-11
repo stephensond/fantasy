@@ -9,8 +9,10 @@ import selectall from '../routes/selectall'
 
 const app = express();
 
+var PORT = 9000 || process.env.port;
+
 const server = http.createServer(app);
-server.listen('9000');
+server.listen(PORT);
 app.use(cors());
 app.use(express.json());
 
