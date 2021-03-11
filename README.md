@@ -1,3 +1,3 @@
-# Ffball
+# Fantasy
 
-let's go we about to ball as hard as tim patrick!
+backend for the modern fantasy app
