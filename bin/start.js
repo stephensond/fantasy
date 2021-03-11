@@ -2,10 +2,10 @@ import http from 'http';
 import express from 'express';
 import cors from 'cors';
 
-import draft from '../routes/draft'
-import newdraft from '../routes/newdraft'
-import selectone from '../routes/selectone'
-import selectall from '../routes/selectall'
+import draft from '../routes/draft.js'
+import newdraft from '../routes/newdraft.js'
+import selectone from '../routes/selectone.js'
+import selectall from '../routes/selectall.js'
 
 const app = express();
 

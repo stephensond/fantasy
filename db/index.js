@@ -9,12 +9,8 @@ const pool = new Pool({
     port: 5432,
 });
 
-interface Query {
-    query: (text: string, params: any[]) => Promise<pg.QueryResult<any>>;
-}
-
-const query: Query = {
-    query: (text: string, params: any[]) => {
+const query = {
+    query: (text, params) => {
         return pool.query(text, params);
     }
 }

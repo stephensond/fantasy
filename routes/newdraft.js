@@ -1,13 +1,13 @@
-import db from '../db';
+import db from '../db/index.js';
 import express from 'express';
 const router = express.Router();
 import * as fs from 'fs';
-import * as path from 'path';
+import path  from 'path';
 
-var sqlstring = path.join(__dirname, '..', 'db', 'newdraft.sql');
+var sqlstring = path.join(path.resolve(), 'db', 'newdraft.sql');
 
-let query: string = "";
-fs.readFile(sqlstring, 'utf8', (err, data: string) => {
+let query = "";
+fs.readFile(sqlstring, 'utf8', (err, data) => {
     if (err) {
         console.error(err)
     }
