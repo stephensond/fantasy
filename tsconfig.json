@@ -11,5 +11,5 @@
       "esModuleInterop": true,
       "allowSyntheticDefaultImports": true
   },
-  "include": ["routes/**/*", "db/index.ts", "bin/start.ts"]
+  "include": ["routes/**/*", "db/index.ts", "bin/start.js"]
 }
