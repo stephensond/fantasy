@@ -7,7 +7,7 @@ router.post('/', function (req, res) {
         db.query('INSERT INTO Users (Username, Password) VALUES ($1, $2)'
         , [body.username, body.pass])
         .then(result => res.status(200).send('Account successfully created'))
-        .catch(err => res.status(400).send('Username taken', err.stack));
+        .catch(err => console.log(err));
 });
 
 export default router;
