@@ -7,6 +7,7 @@ import newdraft from '../routes/newdraft.js'
 import selectone from '../routes/selectone.js'
 import selectall from '../routes/selectall.js'
 import enddraft from '../routes/enddraft.js'
+import adduser from '../routes/adduser.js'
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use('/id', selectone);
 app.use('/all', selectall);
 app.use('/draft', draft);
 app.use('/newDraft', newdraft);
-app.use('/endDraft', enddraft)
+app.use('/endDraft', enddraft);
+app.use('/addUser', adduser);
 
