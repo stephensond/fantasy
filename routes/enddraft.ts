@@ -1,4 +1,4 @@
-import db from '../db/index.js';
+import db from '../db/index';
 import express from 'express';
 const router = express.Router();
 

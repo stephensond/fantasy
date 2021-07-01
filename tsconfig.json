@@ -9,7 +9,8 @@
       "noImplicitAny": false,
       "forceConsistentCasingInFileNames": true,
       "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
+      "outDir": "dist"
   },
-  "include": ["routes/**/*", "db/index.js", "bin/start.js"]
+  "include": ["routes/**/*", "db/index.ts", "bin/start.ts"]
 }

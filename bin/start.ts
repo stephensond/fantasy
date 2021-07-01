@@ -2,13 +2,13 @@ import http from 'http';
 import express from 'express';
 import cors from 'cors';
 
-import draft from '../routes/draft.js'
-import newdraft from '../routes/newdraft.js'
-import selectone from '../routes/selectone.js'
-import selectall from '../routes/selectall.js'
-import enddraft from '../routes/enddraft.js'
-import adduser from '../routes/adduser.js'
-import login from '../routes/login.js'
+import draft from '../routes/draft'
+import newdraft from '../routes/newdraft'
+import selectone from '../routes/selectone'
+import selectall from '../routes/selectall'
+import enddraft from '../routes/enddraft'
+import adduser from '../routes/adduser'
+import login from '../routes/login'
 
 const app = express();
 
