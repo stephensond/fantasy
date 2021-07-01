@@ -8,7 +8,7 @@ import selectone from '../routes/selectone.js'
 import selectall from '../routes/selectall.js'
 import enddraft from '../routes/enddraft.js'
 import adduser from '../routes/adduser.js'
-import login from '../routes/adduser.js'
+import login from '../routes/login.js'
 
 const app = express();
 

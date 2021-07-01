@@ -7,7 +7,8 @@ router.post('/', function (req, res) {
         db.query('SELECT UserID FROM Users WHERE username = $1 AND password = $2'
         , [body.username, body.pass])
         .then(result => {console.log(result.rows); return result.rows.length})
-        .then(len => (len === 1) ? res.status(200).send('test') : res.status(400).send('test'))
+        .then(len => (len === 1) ? res.status(200) : res.status(400))
+        .then(res.send())
         .catch(err => console.log(err));
 });
 
