@@ -7,8 +7,9 @@ router.post('/', function (req, res) {
         db.query('SELECT UserID FROM Users WHERE username = $1 AND password = $2'
         , [body.username, body.pass])
         .then(result => (result.length === 1) ? res.status(200) : res.status(400))
+        .then(console.log(result))
         .then(res.send())
-        .catch(err => console.error(err.stack));
+        .catch(err => console.log(err));
 });
 
 export default router;
