@@ -9,6 +9,8 @@ import selectall from '../routes/selectall'
 import enddraft from '../routes/enddraft'
 import adduser from '../routes/adduser'
 import login from '../routes/login'
+import newleague from '../routes/newleague'
+
 
 const app = express();
 
@@ -25,5 +27,6 @@ app.use('/draft', draft);
 app.use('/newDraft', newdraft);
 app.use('/endDraft', enddraft);
 app.use('/addUser', adduser);
-app.use('/login', login)
+app.use('/login', login);
+app.use('/newleague', newleague)
 
