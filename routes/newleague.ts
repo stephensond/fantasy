@@ -3,7 +3,7 @@ import express from 'express';
 const router = express.Router();
 
 router.post('/', async function (req, res) {
-    const body = JSON.parse(req.body);
+    const body = req.body;
 
     try {
         await db.query('CALL NewLeague($1)', [body]);
