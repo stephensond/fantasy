@@ -1,3 +1,3 @@
 # fantasy
 
-backend for the modern fantasy app
+The backend of Modern Fantasy, built with Express and Postgres.
