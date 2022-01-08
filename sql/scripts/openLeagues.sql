@@ -10,9 +10,9 @@ WITH non_full_leagues as (
     HAVING COUNT(b.teamID) < a.numteams
 )
 SELECT
-    CAST(nfl.team_ct AS INT) team_ct,
+    CAST(nfl.team_ct AS INT) teamCt,
     l.leagueID,
-    l.numteams max_teams,
+    l.numteams maxTeams,
     l.leaguename,
     l.ownerusername
 FROM non_full_leagues nfl
