@@ -11,6 +11,7 @@ import adduser from '../routes/adduser'
 import login from '../routes/login'
 import newleague from '../routes/newleague'
 import grableagues from '../routes/grableagues'
+import joinleague from '../routes/joinleague'
 
 
 const app = express();
@@ -31,4 +32,5 @@ app.use('/addUser', adduser);
 app.use('/login', login);
 app.use('/newleague', newleague)
 app.use('/grableagues', grableagues)
+app.use('/joinleague', joinleague)
 
