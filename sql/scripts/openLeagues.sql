@@ -10,7 +10,7 @@ WITH non_full_leagues as (
     HAVING COUNT(b.teamID) < a.numteams
 )
 SELECT
-    nfl.team_ct,
+    CAST(nfl.team_ct AS INT) team_ct,
     l.leagueID,
     l.numteams max_teams,
     l.leaguename,
@@ -18,3 +18,4 @@ SELECT
 FROM non_full_leagues nfl
 INNER JOIN leagues l
     ON nfl.leagueID = l.leagueID
+WHERE l.leaguename IS NOT NULL
