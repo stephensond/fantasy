@@ -13,7 +13,9 @@ import newleague from '../routes/newleague'
 import grableagues from '../routes/grableagues'
 import joinleague from '../routes/joinleague'
 import grabteams from '../routes/grabteams'
+import getUniqueID from '../utils/uniqueID'
 
+const webSocketServer = require('websocket').server;
 
 const app = express();
 
@@ -21,6 +23,21 @@ var PORT = process.env.PORT || 9000;
 
 const server = http.createServer(app);
 server.listen(PORT);
+const wsServer = new webSocketServer({
+    httpServer: server
+});
+
+const users = {};
+
+wsServer.on('request', function(request) {
+    var userID = getUniqueID();
+    console.log((new Date()) + ' Recieved a new connection from origin ' + request.origin + '.');
+    // Accept any connection for now
+    const connection = request.accept(null, request.origin);
+    users[userID] = connection;
+    console.log('connected: ' + userID + ' in ' + Object.getOwnPropertyNames(users))
+  });
+
 app.use(cors());
 app.use(express.json());
 
