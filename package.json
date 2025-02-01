@@ -9,7 +9,7 @@
   "dependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/pg": "^8.11.10",
+    "@types/pg": "^8.11.11",
     "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
