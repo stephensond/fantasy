@@ -7,7 +7,7 @@
     "start": "concurrently \"tsc -w\" \"nodemon dist/bin/start.js\""
   },
   "dependencies": {
-    "@types/cors": "^2.8.17",
+    "@types/cors": "^2.8.18",
     "@types/express": "^5.0.2",
     "@types/pg": "^8.11.14",
     "concurrently": "^9.1.2",
